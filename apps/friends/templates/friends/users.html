@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users Page</title>
+	{% load staticfiles %}
+    <!-- Bootstrap -->
+          <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="{% static 'friends/css/users.css' %}" charset="utf-8"  />
+</head>
+<body>
+	<div class="wrapper">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand"><h1>{{ user.name }}'s Profile Page</h1></a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="{% url 'dashboard' %}">Home</a></li>
+				<li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout </a></li>
+				</ul>
+			</div>
+		</nav>
+		<br>
+		<h2>Name: {{ user.name }}</h2>
+		<h2>Email Address: {{ user.email }}</h2>
+		<h2>Alias: {{ user.email }}</h2>
+	</div>
+</body>
+</html>
