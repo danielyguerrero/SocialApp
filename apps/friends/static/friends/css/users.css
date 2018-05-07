@@ -1,5 +1,5 @@
 body{
-	background: radial-gradient(#1ba6cd,#1ba6cd, white);
+  background: #bad8ff;
 }
 h1{
 	margin:0;
@@ -66,13 +66,14 @@ h1{
 } 
 /*==================================================================================*/
 .wrapper{
-	height: auto;
+	height: 100%;
 	width: auto;
 	max-height: 400px;
 	max-width: 550px;
-	padding: 30px;
+  margin-top: 10px;
 	margin-right: auto;
 	margin-left: auto;
+  padding-bottom: 15px;
 	text-align: center;
 	font-size: 20px;
 	border-radius: 10px;

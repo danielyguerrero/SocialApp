@@ -1,10 +1,10 @@
 body {
+  height: 100%;
+  width: auto;
 	text-align: center;	
-	height: 650px;
-	width: auto;
-	background: radial-gradient(#1ba6cd,#1ba6cd, white);
+	background: #bad8ff;
 }
-h1 {
+h1, h3{
 	margin:0;
 }
 /*=======================================================================================*/
@@ -70,24 +70,22 @@ h1 {
 .wrapper{
 	height: auto;
 	width: auto;
-	max-height: 630px;
-	max-width: 800px;
-	padding: 10px;
+  max-width: 700px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 20px;
 	background-color: white;
 	font-size: 20px;
 	border-radius: 40px;
+  padding: 10px;
 }
 table{
 	margin-right: auto;
 	margin-left: auto;
 	height: auto;
 	width: auto;
-
 }
-th td {
+th, td {
 	text-align: center;
 }
 form{
