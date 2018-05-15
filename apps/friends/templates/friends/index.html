@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Your Appointments</title>
+        <title>Social App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load staticfiles %}
         <!-- Bootstrap -->
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- jQuery library -->
@@ -20,15 +20,16 @@
     </head>
     <body>
         <!-- ===============    NAVBAR    ===================== -->
-        <div class="topnav" id="myTopnav">
+        <div class="topnav justify-content-end" id="myTopnav">
             
             <a href="{% url 'dashboard' %}" class="active">Welcome, {{ user.name }}!</a>
-            <a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+
+            <a href="{% url 'logout' %}" class="glyphicon glyphicon-log-out navbar-right"> Logout</a>
             
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
         <div class="wrapper">
-            <!-- =================================     CONTAINER       ========================================= -->
+        <!-- ===================  CONTAINER    ===================== -->
             {% if user.friends.count > 0 %}
                 <h3>Here is the list of your friends:</h3>
                 <table class="table table-striped">
@@ -45,7 +46,9 @@
                                 <td>
                                     <a href='showuser/{{friend.id}}'>View Profile</a>
                                     <br>
-                                    <a href='remfriend/{{friend.id}}'>Remove as Friend</a>
+                                    <a href='remfriend/{{friend.id}}'>
+                                        <img src='/static/friends/img/icon2.png' style="width:42px;height:42px;border:0">
+                                     </a>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -68,7 +71,7 @@
                         <td><a href='showuser/{{nonfriend.id}}'>{{ nonfriend.alias }}</a></td>
                         <td>
                             <a href='addfriend/{{nonfriend.id}}'>
-                                <img src='/static/friends/img/logo.jpg' style="width:42px;height:42px;border:0">
+                                <img src='/static/friends/img/icon.jpg' style="width:73px;height:54px;border:0">
                             </a>
                         </td>
                     </tr>

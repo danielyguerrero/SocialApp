@@ -1,5 +1,8 @@
-body{
-  background: #bad8ff;
+body {
+  text-align: center;
+  background-color: #cbcbcb;
+  padding-bottom: 225px;
+  height: 100%;
 }
 h1{
 	margin:0;
@@ -23,6 +26,7 @@ h1{
     text-decoration: none;
     font-size: 17px;
     color: black;
+    margin-right: 10px;
 }
 
 /* Change the color of links on hover */
@@ -66,9 +70,8 @@ h1{
 } 
 /*==================================================================================*/
 .wrapper{
-	height: 100%;
+	height: auto;
 	width: auto;
-	max-height: 400px;
 	max-width: 550px;
   margin-top: 10px;
 	margin-right: auto;
@@ -76,6 +79,6 @@ h1{
   padding-bottom: 15px;
 	text-align: center;
 	font-size: 20px;
-	border-radius: 10px;
+	border-radius: 35px;
 	background-color: white;
 }
